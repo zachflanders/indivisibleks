@@ -1,0 +1,71 @@
+.event-banner{
+  color: #fafafa;
+  height:80px;
+  margin-bottom: 15px;
+  background: url(../../assets/images/fairey-banner.jpg) no-repeat center right, #58b89d;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+/* Custom, iPhone Retina */
+    @media only screen and (min-width : 320px) {
+      .event-banner {
+        background: #58b89d;
+      }
+
+    }
+
+    /* Extra Small Devices, Phones */
+    @media only screen and (min-width : 480px) {
+      .event-banner {
+        background: #58b89d;
+      }
+
+    }
+
+    /* Small Devices, Tablets */
+    @media only screen and (min-width : 768px) {
+      .event-banner{
+        color: #fafafa;
+        height:80px;
+        margin-bottom: 15px;
+        background: url(../../assets/images/fairey-banner.jpg) no-repeat center right, #58b89d;
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        -o-background-size: cover;
+        background-size: cover;
+      }
+
+    }
+
+    /* Medium Devices, Desktops */
+    @media only screen and (min-width : 992px) {
+      .event-banner{
+        color: #fafafa;
+        height:80px;
+        margin-bottom: 15px;
+        background: url(../../assets/images/fairey-banner.jpg) no-repeat center right, #58b89d;
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        -o-background-size: cover;
+        background-size: cover;
+      }
+
+    }
+
+    /* Large Devices, Wide Screens */
+    @media only screen and (min-width : 1200px) {
+      .event-banner{
+        color: #fafafa;
+        height:80px;
+        margin-bottom: 15px;
+        background: url(../../assets/images/fairey-banner.jpg) no-repeat center right, #58b89d;
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        -o-background-size: cover;
+        background-size: cover;
+      }
+
+    }

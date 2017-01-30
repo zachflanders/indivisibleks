@@ -1,0 +1,40 @@
+<div class='container' >
+    <div class='row'>
+      <div class='col-md-12 event-banner' style='padding-top:20px;'>
+        <h1 style='margin-top:0px;'>Show up. Be heard.</h1>
+      </div>
+    </div>
+    <div class='row'>
+      <div ng-show="$ctrl.hasRole('editor')">
+          <div class='col-xs-12' style='background:#e0e0e0; padding:15px; margin-bottom:15px;'>
+            <span class='text-muted'>Editor Toolbar</span> &nbsp;
+            <a href='/event/add' class='btn btn-default'>
+              <i class="fa fa-plus" aria-hidden="true"></i> Add Event
+            </a>
+          </div>
+      </div>
+    </div>
+  <div class='row'>
+    <div class='col-md-4'>
+      <h1>Upcoming Events</h1>
+      <hr>
+      <div class='panel panel-default' dir-paginate="event in events | orderBy:'start' | itemsPerPage: 4 ">
+        <div class='panel-body'>
+          <h4><strong><a href='/event/{{event._id}}' style='color:#000;'>{{event.title}}</a></strong></h4>
+          <h4>{{event.start | date: 'EEEE, MMMM d'}}</h4>
+          <p>
+            <span ng-if="event.start || event.end">{{event.start | date: 'h:mma'}} - {{event.end | date: 'h:mma'}}<br></span>
+            <span ng-if="event.location">{{event.location}}<br></span>
+            <span ng-if="event.address || event.state || event.zip">{{event.address}}, {{event.state}}, {{event.zip}}</span>
+          </p>
+          <a href='{{event.link}}' class='btn btn-default' ng-if="event.link && event.button"><span style="font-family:'FontAwesome'">{{event.icon}}</span> {{event.button}}</a>
+        </div>
+      </div>
+      <p class='text-center'><dir-pagination-controls></dir-pagination-controls></p>
+    </div>
+    <div class='col-md-8'>
+      <h1>Calendar</h1>
+      <hr>
+      <div ui-calendar="uiConfig.calendar"  ng-model="eventSources"></div>
+    </div>
+</div>

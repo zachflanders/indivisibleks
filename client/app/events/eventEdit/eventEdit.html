@@ -1,0 +1,109 @@
+<div class='container'>
+  <h1>Edit Event</h1>
+  <hr>
+  <form class='form'>
+    <div class='row'>
+      <div class='col-md-8'>
+        <div class="form-group">
+          <label for="title">Event Title</label>
+          <input type='text' id='title' class='form-control' ng-model='$ctrl.event.title'></input>
+        </div>
+      </div>
+    </div>
+    <br><br>
+    <div class='row'>
+      <div class='col-md-4'>
+        <label for="start_date">Start</label>
+        <div class="input-group" datetimepicker ng-model="$ctrl.event.start">
+          <input class="form-control"/>
+          <span class="input-group-addon">
+            <i class="fa fa-calendar"></i>
+          </span>
+        </div>
+        <br><br>
+      </div>
+      <div class='col-md-4'>
+        <label for="end">End</label>
+        <div class="input-group" datetimepicker ng-model="$ctrl.event.end">
+          <input class="form-control"/>
+          <span class="input-group-addon">
+            <i class="fa fa-calendar"></i>
+          </span>
+        </div>
+      </div>
+    </div>
+    <br><br>
+    <div class='row'>
+      <div class='col-md-8'>
+        <div class="form-group">
+          <label for="location">Location Name</label>
+          <input type='text' id='title' class='form-control' ng-model='$ctrl.event.location'></input>
+        </div>
+      </div>
+    </div>
+    <div class='row'>
+      <div class='col-md-8'>
+        <div class="form-group">
+          <label for="address">Address</label>
+          <input type='text' id='title' class='form-control' ng-model='$ctrl.event.address'></input>
+        </div>
+      </div>
+    </div>
+    <div class='row'>
+      <div class='col-md-4'>
+        <div class="form-group">
+          <label for="city">City</label>
+          <input type='text' id='title' class='form-control' ng-model='$ctrl.event.city'></input>
+        </div>
+      </div>
+      <div class='col-md-2'>
+        <div class="form-group">
+          <label for="state">State</label>
+          <input type='text' id='title' class='form-control' ng-model='$ctrl.event.state'></input>
+        </div>
+      </div>
+      <div class='col-md-2'>
+        <div class="form-group">
+          <label for="zip">Zip Code</label>
+          <input type='text' id='title' class='form-control' ng-model='$ctrl.event.zip'></input>
+        </div>
+      </div>
+    </div>
+    <br><br>
+    <div class='row'>
+      <div class='col-md-8'>
+        <div class="form-group">
+          <label for="description">Description</label>
+          <textarea class="form-control" rows="3" ng-model='$ctrl.event.description'></textarea>
+        </div>
+      </div>
+    </div>
+    <br><br>
+    <div class='row'>
+      <div class='col-md-3'>
+        <div class="form-group">
+          <label for="link">Button Link</label>
+          <input type='text' id='link' class='form-control' ng-model='$ctrl.event.link' placeholder="eg. http://www.facebook.com/events/1039776239461535/"></input>
+        </div>
+      </div>
+      <div class='col-md-2'>
+        <div class="form-group">
+          <label for="icon">Button Icon</label>
+          <select class='form-control' id='icon' ng-model='$ctrl.event.icon' style="font-family:'FontAwesome', sans-serif;">
+            <option value=''>None</option>
+            <option value='&#xf09a;'>&#xf09a; Facebook</option>
+            <option value='&#xf0ac;'>&#xf0ac; Web</option>
+          </select>
+        </div>
+      </div>
+      <div class='col-md-3'>
+        <div class="form-group">
+          <label for="button">Button Text</label>
+          <input type='text' id='button' class='form-control' ng-model='$ctrl.event.button'></input>
+        </div>
+      </div>
+    </div>
+    <br><br>
+    <button class='btn btn-primary' ng-click='$ctrl.editEvent()'>Edit Event</button>
+  </form>
+</div>

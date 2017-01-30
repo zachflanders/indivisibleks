@@ -1,0 +1,26 @@
+<div class='container' >
+  <div ng-show="$ctrl.hasRole('editor')">
+      <div class='col-md-8' style='background:#e0e0e0; padding:15px; margin-bottom:15px; margin-left:15px;'>
+        <span class='text-muted'>Editor Toolbar</span> &nbsp;
+        <a href='/event/{{$ctrl.event._id}}/edit' class='btn btn-default '>
+          <i class="fa fa-pencil" aria-hidden="true"></i> Edit Event
+        </a>
+      </div>
+  </div>
+  <div class='col-md-8'>
+    <h1>{{$ctrl.event.title}}</h1>
+    <hr>
+    <h2>{{$ctrl.event.start | date: 'EEEE, MMMM d'}}</h2>
+    <h4>
+      <span ng-if="$ctrl.event.start || $ctrl.event.end">{{$ctrl.event.start | date: 'h:mma'}} - {{$ctrl.event.end | date: 'h:mma'}}<br><br></span>
+      <span ng-if="$ctrl.event.location">{{$ctrl.event.location}}<br></span>
+      <span ng-if="$ctrl.event.address || $ctrl.event.state || $ctrl.event.zip">{{$ctrl.event.address}}, {{$ctrl.event.state}}, {{$ctrl.event.zip}}</span>
+    </h4>
+    <br><br>
+    <p>
+      {{$ctrl.event.description}}
+    </p>
+    <br><br>
+    <a href='{{$ctrl.event.link}}' class='btn btn-default' ng-if="$ctrl.event.link && $ctrl.event.button"><span style="font-family:'FontAwesome'">{{$ctrl.event.icon}}</span> {{$ctrl.event.button}}</a>
+  </div>
+</div>

@@ -1,0 +1,113 @@
+.thing-form {
+  margin: 20px 0;
+}
+
+#banner {
+  border-bottom: none;
+  margin-top: -20px;
+}
+
+#banner h1 {
+  font-size: 80px;
+  line-height: 1;
+  letter-spacing: -1px;
+}
+
+.hero-unit {
+  position: relative;
+  padding: 30px 15px;
+  color: #F5F5F5;
+  text-align: center;
+  background: url(../../assets/images/Lincoln.jpg) no-repeat center center fixed, #fafafa;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+.navbar-text {
+  margin-left: 15px;
+}
+
+.emphasis{
+  font-size: 16px;
+  line-height: 1.2;
+  margin-top: 30px;
+}
+
+.divider{
+  height:550px;
+  color: #ffffff;
+  font-size: 30px;
+  background: url(../../assets/images/fairey.jpg) no-repeat center center, #fafafa;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+
+  .btn-red {
+  font:14px;
+   color:#fafafa;
+   background: rgba(153, 11, 11, 0.73);
+   border: 0px;
+  }
+
+  .btn-red:hover, .btn-red:active {
+    font:14px;
+    color:#fafafa;
+   background:rgba(153, 11, 11, 1);
+   border: 0px;
+
+  }
+
+/* Custom, iPhone Retina */
+    @media only screen and (min-width : 320px) {
+      #banner h1 {
+        font-size: 40px;
+        line-height: 1;
+        letter-spacing: -1px;
+      }
+
+    }
+
+    /* Extra Small Devices, Phones */
+    @media only screen and (min-width : 480px) {
+      #banner h1 {
+        font-size: 50px;
+        line-height: 1;
+        letter-spacing: -1px;
+      }
+
+    }
+
+    /* Small Devices, Tablets */
+    @media only screen and (min-width : 768px) {
+      #banner h1 {
+        font-size: 60px;
+        line-height: 1;
+        letter-spacing: -1px;
+      }
+
+    }
+
+    /* Medium Devices, Desktops */
+    @media only screen and (min-width : 992px) {
+      #banner h1 {
+        font-size: 70px;
+        line-height: 1;
+        letter-spacing: -1px;
+      }
+
+    }
+
+    /* Large Devices, Wide Screens */
+    @media only screen and (min-width : 1200px) {
+      #banner h1 {
+        font-size: 80px;
+        line-height: 1;
+        letter-spacing: -1px;
+      }
+
+    }
