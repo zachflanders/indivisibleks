@@ -17,9 +17,8 @@
       <span ng-if="$ctrl.event.address || $ctrl.event.state || $ctrl.event.zip">{{$ctrl.event.address}}, {{$ctrl.event.state}}, {{$ctrl.event.zip}}</span>
     </h4>
     <br><br>
-    <p>
-      {{$ctrl.event.description}}
-    </p>
+    <div ta-bind ng-bind-html='$ctrl.event.description'>
+    </div>
     <br><br>
     <a href='{{$ctrl.event.link}}' class='btn btn-default' ng-if="$ctrl.event.link && $ctrl.event.button"><span style="font-family:'FontAwesome'">{{$ctrl.event.icon}}</span> {{$ctrl.event.button}}</a>
   </div>

@@ -13,7 +13,8 @@ angular.module('indivisibleks2App', [
   'validation.match',
   'ui.calendar',
   'angularUtils.directives.dirPagination',
-  'ae-datetimepicker'
+  'ae-datetimepicker',
+  'textAngular'
 ])
   .config(function($urlRouterProvider, $locationProvider) {
     $urlRouterProvider

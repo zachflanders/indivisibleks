@@ -15,6 +15,7 @@
       <!-- bower:css -->
       <link rel="stylesheet" href="bower_components/eonasdan-bootstrap-datetimepicker/build/css/bootstrap-datetimepicker.min.css" />
       <link rel="stylesheet" href="bower_components/fullcalendar/dist/fullcalendar.css" />
+      <link rel="stylesheet" href="bower_components/textAngular/dist/textAngular.css" />
       <link rel="stylesheet" href="bower_components/toastr/toastr.css" />
       <!-- endbower -->
     <!-- endbuild -->
@@ -70,9 +71,18 @@
       <script src="bower_components/angular-validation-match/dist/angular-validation-match.min.js"></script>
       <script src="bower_components/angularUtils-pagination/dirPagination.js"></script>
       <script src="bower_components/lodash/dist/lodash.compat.js"></script>
+      <script src="bower_components/rangy/rangy-core.js"></script>
+      <script src="bower_components/rangy/rangy-classapplier.js"></script>
+      <script src="bower_components/rangy/rangy-highlighter.js"></script>
+      <script src="bower_components/rangy/rangy-selectionsaverestore.js"></script>
+      <script src="bower_components/rangy/rangy-serializer.js"></script>
+      <script src="bower_components/rangy/rangy-textrange.js"></script>
+      <script src="bower_components/textAngular/dist/textAngular.js"></script>
+      <script src="bower_components/textAngular/dist/textAngular-sanitize.js"></script>
+      <script src="bower_components/textAngular/dist/textAngularSetup.js"></script>
       <script src="bower_components/toastr/toastr.js"></script>
       <!-- endbower -->
-      <script src="socket.io-client/dist/socket.io.js"></script>
+      <script src="socket.io-client/socket.io.js"></script>
     <!-- endbuild -->
     <script type="text/javascript" src="bower_components/angular-bootstrap-datetimepicker/src/js/datetimepicker.js"></script>
     <script type="text/javascript" src="bower_components/angular-bootstrap-datetimepicker/src/js/datetimepicker.templates.js"></script>
@@ -82,18 +92,23 @@
       <script src="app/admin/admin.module.js"></script>
       <script src="components/auth/auth.module.js"></script>
       <script src="components/util/util.module.js"></script>
-      <script src="app/main/main.js"></script>
+      <script src="app/events/eventRoutes.js"></script>
       <script src="app/admin/admin.controller.js"></script>
       <script src="app/account/account.js"></script>
       <script src="app/admin/admin.router.js"></script>
       <script src="app/app.constant.js"></script>
+      <script src="app/blog/blog/blog.controller.js"></script>
+      <script src="app/blog/blogRoutes.js"></script>
+      <script src="app/blog/post/post.controller.js"></script>
+      <script src="app/blog/postAdd/postAdd.controller.js"></script>
+      <script src="app/blog/postEdit/postEdit.controller.js"></script>
       <script src="app/events/event/event.controller.js"></script>
       <script src="app/events/eventAdd/eventAdd.controller.js"></script>
       <script src="app/events/eventEdit/eventEdit.controller.js"></script>
-      <script src="app/events/eventRoutes.js"></script>
+      <script src="app/account/login/login.controller.js"></script>
       <script src="app/events/events/events.controller.js"></script>
       <script src="app/main/main.controller.js"></script>
-      <script src="app/account/login/login.controller.js"></script>
+      <script src="app/main/main.js"></script>
       <script src="app/account/settings/settings.controller.js"></script>
       <script src="components/auth/auth.service.js"></script>
       <script src="components/auth/interceptor.service.js"></script>

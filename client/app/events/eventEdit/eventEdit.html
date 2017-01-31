@@ -72,10 +72,8 @@
     <br><br>
     <div class='row'>
       <div class='col-md-8'>
-        <div class="form-group">
-          <label for="description">Description</label>
-          <textarea class="form-control" rows="3" ng-model='$ctrl.event.description'></textarea>
-        </div>
+        <label>Description</label>
+        <div text-angular ng-model="$ctrl.event.description" ta-toolbar="[['bold','italics','underline','strikeThrough'],['ul','ol','quote'],['justifyLeft', 'justifyCenter', 'justifyRight'],['html', 'insertImage','insertLink', 'insertVideo']]"></div>
       </div>
     </div>
     <br><br>
