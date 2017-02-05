@@ -1,1 +1,43 @@
-<div>This is the postAdd view.</div>
+<div class='container'>
+  <h1>New Post</h1>
+  <hr>
+  <form class='form'>
+    <div class='row'>
+      <div class='col-md-8'>
+        <div class="form-group">
+          <label for="title">Title</label>
+          <input type='text' id='title' class='form-control' ng-model='$ctrl.post.title'></input>
+        </div>
+      </div>
+    </div>
+    <br>
+    <div class='row'>
+      <div class='col-md-4'>
+        <label for="start_date">Publish Date and Time</label>
+        <div class="input-group" datetimepicker ng-model="$ctrl.post.publish">
+          <input class="form-control"/>
+          <span class="input-group-addon">
+            <i class="fa fa-calendar"></i>
+          </span>
+        </div>
+      </div>
+      <div class='col-md-4'>
+        <label>Post Status</label>
+        <select class="form-control" ng-model='$ctrl.post.status'>
+          <option>Draft</option>
+          <option>Published</option>
+        </select>
+        <br>
+      </div>
+    </div>
+    <br>
+    <div class='row'>
+      <div class='col-md-8'>
+        <label>Post Body</label>
+        <div text-angular ng-model="$ctrl.post.body" ta-toolbar="[['bold','italics','underline','strikeThrough'],['ul','ol','quote'],['justifyLeft', 'justifyCenter', 'justifyRight'],['html', 'insertImage','insertLink', 'insertVideo']]"></div>
+      </div>
+    </div>
+    <br><br>
+    <button class='btn btn-primary' ng-click='$ctrl.addPost()'>Add Post</button>
+  </form>
+</div>

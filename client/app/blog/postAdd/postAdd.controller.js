@@ -2,8 +2,19 @@
 (function(){
 
 class PostAddComponent {
-  constructor() {
-    this.message = 'Hello';
+  constructor($http) {
+    var vm = this;
+    vm.post = {};
+    vm.post.status = 'Draft';
+    vm.post.title = '';
+    vm.post.publish = '';
+    vm.post.body = '';
+    this.addPost = function(){
+      $http.post('api/posts/', vm.post );
+      toastr.success('Added Post ' + vm.post.title);
+      vm.post = {};
+      document.body.scrollTop = document.documentElement.scrollTop = 0;
+    };
   }
 }
 

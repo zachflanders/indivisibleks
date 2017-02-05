@@ -1,0 +1,30 @@
+<div class='container'>
+  <h1>Your Representatives</h1>
+  <h2>State-wide</h2>
+  <hr>
+  <div class='row'>
+    <div class='col-md-6'>
+      <h3>Senator Pat Roberts</h3>
+      <img src='/assets/images/Pat_Roberts_official_photo.jpg' width='100' class='img-rounded'>
+    </div>
+  </div>
+
+
+    <div class='row'>
+      <div class='panel panel-default'>
+        <div class='panel-body'>
+          <div class='col-md-6'>
+            <form ng-submit='$ctrl.getDistrict($ctrl.zip)'>
+              <h3>Find Your District</h3>
+              <label>Zip Code</label>
+              <input type='text' class='form-control' ng-model='$ctrl.zip'><br>
+              <button  class='btn btn-default' type='submit' value='submit'>Submit</button>
+            </form>
+          </div>
+          <div class='col-md-6' id='result' style='min-height:336px'>
+          </div>
+        </div>
+      </div>
+    </div>
+  
+</div>

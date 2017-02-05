@@ -3,9 +3,10 @@
 import mongoose from 'mongoose';
 
 var PostSchema = new mongoose.Schema({
-  name: String,
-  info: String,
-  active: Boolean
+  title: String,
+  status: String,
+  publish: Date,
+  body: String
 });
 
 export default mongoose.model('Post', PostSchema);

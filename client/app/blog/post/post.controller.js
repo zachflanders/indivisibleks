@@ -2,8 +2,17 @@
 (function(){
 
 class PostComponent {
-  constructor() {
-    this.message = 'Hello';
+  constructor($http, $stateParams, Auth) {
+    var vm = this;
+    var id = $stateParams.id;
+    $http.get('/api/posts/'+id).then(response => {
+      vm.post = response.data;
+
+
+
+    });
+    this.hasRole = Auth.hasRole;
+
   }
 }
 

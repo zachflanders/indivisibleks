@@ -18,6 +18,7 @@ angular.module('indivisibleks2App')
       })
       .state('eventEdit', {
         url: '/event/:id/edit',
-        template: '<event-edit></event-edit>'
+        template: '<event-edit></event-edit>',
+        authenticate: 'editor'
       });
   });

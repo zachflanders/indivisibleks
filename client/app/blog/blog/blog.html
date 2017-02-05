@@ -1,1 +1,16 @@
-<div>This is the blog view.</div>
+<div class='container'>
+  <div class='col-md-8'>
+    <h1>Updates</h1>
+    <hr>
+    <div dir-paginate="post in $ctrl.posts | orderBy:'-publish' | itemsPerPage:5" >
+      <h2>
+        <a ng-show="$ctrl.hasRole('editor')" href='/post/{{post._id}}/edit' class='btn btn-default pull-right'>Edit Post</a>
+        <a href='/post/{{post._id}}' style='color:#000000;'>{{post.title}}</a>
+      </h2>
+      {{post.publish | date}}<br><br>
+      <div ng-bind-html='$ctrl.trustAsHtml(post.body)'></div>
+      <hr>
+      <br>
+    </div>
+  </div>
+</div>
