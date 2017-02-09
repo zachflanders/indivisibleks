@@ -12,6 +12,16 @@ class PostComponent {
 
     });
     this.hasRole = Auth.hasRole;
+    this.share = function(post, title){
+      console.log(post);
+      FB.ui(
+      {
+          method: 'feed',
+          link: 'http://www.indivisibleks.com/post/'+post,
+          name: title,
+          picture: 'https://c1.staticflickr.com/1/582/32735500115_cc5ba83595_o.png'
+      });
+    };
 
   }
 }

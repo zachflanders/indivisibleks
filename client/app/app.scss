@@ -21,6 +21,10 @@ $fa-font-path: "../bower_components/font-awesome/fonts";
 @import 'blog/post/post.scss';
 @import 'blog/postAdd/postAdd.scss';
 @import 'blog/postEdit/postEdit.scss';
+@import 'districts/district1/district1.scss';
+@import 'districts/district2/district2.scss';
+@import 'districts/district3/district3.scss';
+@import 'districts/district4/district4.scss';
 @import 'districts/districts.scss';
 @import 'events/event/event.scss';
 @import 'events/eventAdd/eventAdd.scss';
@@ -62,4 +66,13 @@ body{
   background: rgba(153, 11, 11, 0.73);
   min-height:40px;
   padding:15px;
+}
+.facebook-btn{
+  color: #3b5998;
+  background: rgba(255,255, 255, 0);
+  border: 1px solid #3b5998;
+}
+.facebook-btn:hover, .facebook-btn:active {
+ color:#ffffff;
+ background:#3b5998;
 }

@@ -3,8 +3,8 @@
 angular.module('indivisibleks2App')
   .config(function ($stateProvider) {
     $stateProvider
-      .state('statewide', {
-        url: '/statewide',
-        template: '<districts></districts>'
+      .state('district3', {
+        url: '/district3',
+        template: '<district-3></district-3>'
       });
   });

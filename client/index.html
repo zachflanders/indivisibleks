@@ -20,6 +20,7 @@
       <!-- endbower -->
     <!-- endbuild -->
       <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+      <link href='https://api.mapbox.com/mapbox.js/v3.0.1/mapbox.css' rel='stylesheet' />
 
     <!-- build:css({.tmp,client}) app/app.css -->
       <link rel="stylesheet" href="app/app.css">
@@ -29,6 +30,26 @@
     <!-- endbuild -->
   </head>
   <body ng-app="indivisibleks2App">
+    <script>
+      window.fbAsyncInit = function() {
+        FB.init({
+          appId      : '1723516084644440',
+          status     : true,
+          cookie     : true,
+          xfbml      : true,
+          version    : 'v2.8'
+        });
+        FB.AppEvents.logPageView();
+      };
+
+      (function(d, s, id){
+         var js, fjs = d.getElementsByTagName(s)[0];
+         if (d.getElementById(id)) {return;}
+         js = d.createElement(s); js.id = id;
+         js.src = "//connect.facebook.net/en_US/sdk.js";
+         fjs.parentNode.insertBefore(js, fjs);
+       }(document, 'script', 'facebook-jssdk'));
+    </script>
     <!--[if lt IE 7]>
       <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
     <![endif]-->
@@ -83,8 +104,10 @@
       <script src="bower_components/textAngular/dist/textAngularSetup.js"></script>
       <script src="bower_components/toastr/toastr.js"></script>
       <!-- endbower -->
-      <script src="socket.io-client/socket.io.js"></script>
+      <script src="socket.io-client/dist/socket.io.js"></script>
     <!-- endbuild -->
+    <script src='https://api.mapbox.com/mapbox.js/v3.0.1/mapbox.js'></script>
+    <script src='https://npmcdn.com/@turf/turf/turf.min.js'></script>
     <script type="text/javascript" src="bower_components/angular-bootstrap-datetimepicker/src/js/datetimepicker.js"></script>
     <script type="text/javascript" src="bower_components/angular-bootstrap-datetimepicker/src/js/datetimepicker.templates.js"></script>
     <!-- build:js(.tmp) app/app.js -->
@@ -93,7 +116,7 @@
       <script src="app/admin/admin.module.js"></script>
       <script src="components/auth/auth.module.js"></script>
       <script src="components/util/util.module.js"></script>
-      <script src="app/events/eventRoutes.js"></script>
+      <script src="app/districts/districts.js"></script>
       <script src="app/admin/admin.controller.js"></script>
       <script src="app/account/account.js"></script>
       <script src="app/admin/admin.router.js"></script>
@@ -103,12 +126,20 @@
       <script src="app/blog/post/post.controller.js"></script>
       <script src="app/blog/postAdd/postAdd.controller.js"></script>
       <script src="app/blog/postEdit/postEdit.controller.js"></script>
+      <script src="app/districts/district1/district1.controller.js"></script>
+      <script src="app/districts/district1/district1.js"></script>
+      <script src="app/districts/district2/district2.controller.js"></script>
+      <script src="app/districts/district2/district2.js"></script>
+      <script src="app/districts/district3/district3.controller.js"></script>
+      <script src="app/districts/district3/district3.js"></script>
+      <script src="app/districts/district4/district4.controller.js"></script>
+      <script src="app/districts/district4/district4.js"></script>
       <script src="app/districts/districts.controller.js"></script>
-      <script src="app/districts/districts.js"></script>
+      <script src="app/account/login/login.controller.js"></script>
       <script src="app/events/event/event.controller.js"></script>
       <script src="app/events/eventAdd/eventAdd.controller.js"></script>
       <script src="app/events/eventEdit/eventEdit.controller.js"></script>
-      <script src="app/account/login/login.controller.js"></script>
+      <script src="app/events/eventRoutes.js"></script>
       <script src="app/events/events/events.controller.js"></script>
       <script src="app/get-involved/get-involved.controller.js"></script>
       <script src="app/get-involved/get-involved.js"></script>

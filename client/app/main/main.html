@@ -9,31 +9,51 @@
     <a href='https://www.indivisibleguide.com/download-the-guide' class='btn btn-lg ghost-button'>Download the Guide</a>
   </div>
 </header>
-  <div class='row alert-bar'>
+<div class='container'>
+  <br><br>
+  <div class='row'>
+        <div class='col-md-6'>
+          <form ng-submit='$ctrl.getDistrict($ctrl.address)'>
+            <h2>Find Your Congressional District</h2>
+            <label>Your Address</label>
+            <input type='text' class='form-control' ng-model='$ctrl.address' placeholder='e.g. 1234 Santa Fe Ave. Salina, KS 67401'><br>
+            <button  class='btn btn-default' type='submit' value='submit'>Submit</button>
+            <br><br><br><br>
+          </form>
+        </div>
+        <div class='col-md-6' id='result' >
+        </div>
+  </div>
+</div>
+  <div class='alert-bar'>
     <div class='container'>
       <div class='col-md-12 text-center'>
         <h2>Take Action!</h2>
       </div>
-      <div class='col-md-4 text-center'>
-        <h1><i class="fa fa-phone" aria-hidden="true"></i></h1>
-          <h4>Call your Representatives</h4>
-          <p>Calling your representatives is an effective way to get your voice heard. We use 5calls.org for helpful lists of issues and scripts.</p>
-          <a href='http://5calls.org' class='btn btn-red'><i class="fa fa-phone" aria-hidden="true"></i>&nbsp; 5calls.org</a>
-      </div>
-      <div class='col-md-4 text-center'>
-        <h1><i class="fa fa-bullhorn" aria-hidden="true"></i></h1>
-        <h4>Attend an Event</h4>
-        <p>Showing up to your representatives' offices makes a powerful statement.  View our calendar of events to show up and be heard.</p>
-        <a ui-sref='events' class='btn btn-red'><i class="fa fa-calendar" aria-hidden="true"></i>&nbsp; Events</a>
-      </div>
-      <div class='col-md-4 text-center'>
-        <h1><i class="fa fa-hand-paper-o" aria-hidden="true"></i></h1>
-        <h4>Volunteer on a Committee</h4>
-        <p>Volunteer on a committee and help us advance our movement.  We are an all-volunteer grassroots movement.</p>
-        <a ui-sref='get-involved' class='btn btn-red'><i class="fa fa-pencil" aria-hidden="true"></i>&nbsp; Sign up for a Committee</a>
+      <div class='row'>
+        <div class='col-md-4 text-center'>
+          <h1><i class="fa fa-phone" aria-hidden="true"></i></h1>
+            <h4>Call your Representatives</h4>
+            <p>Calling your representatives is an effective way to get your voice heard. We use 5calls.org for helpful lists of issues and scripts.</p>
+            <a href='http://5calls.org' class='btn btn-red'><i class="fa fa-phone" aria-hidden="true"></i>&nbsp; 5calls.org</a>
+        </div>
+        <div class='col-md-4 text-center'>
+          <h1><i class="fa fa-bullhorn" aria-hidden="true"></i></h1>
+          <h4>Attend an Event</h4>
+          <p>Showing up to your representatives' offices makes a powerful statement.  View our calendar of events to show up and be heard.</p>
+          <a ui-sref='events' class='btn btn-red'><i class="fa fa-calendar" aria-hidden="true"></i>&nbsp; Events</a>
+        </div>
+        <div class='col-md-4 text-center'>
+          <h1><i class="fa fa-hand-paper-o" aria-hidden="true"></i></h1>
+          <h4>Volunteer on a Committee</h4>
+          <p>Volunteer on a committee and help us advance our movement.  We are an all-volunteer grassroots movement.</p>
+          <a ui-sref='get-involved' class='btn btn-red'><i class="fa fa-pencil" aria-hidden="true"></i>&nbsp; Sign up for a Committee</a>
+        </div>
       </div>
     </div>
   </div>
+
+  <hr>
   <div class="container">
     <div class="row">
       <div class="col-md-8 col-md-offset-2">

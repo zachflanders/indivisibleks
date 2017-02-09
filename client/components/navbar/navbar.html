@@ -1,9 +1,11 @@
 
+<!--
 <div class='alert-bar' id='alert-bar'>
   <a href='#' class='btn btn-red btn-xs pull-right' style='border:solid 1px rgba(153, 11, 11, 1)' ng-click='nav.closeAlert()'><i class="fa fa-times" aria-hidden="true"></i></a>
   <i class="fa fa-bullhorn" aria-hidden="true"></i> <strong><u>Urgent:</u></strong> Call Senator Moran's office today to oppose Betsy DeVos for Secretary of Education. Save our public schools!
   &nbsp;<a href='http://www.moran.senate.gov/public/index.cfm/contact-info' class='btn btn-red btn-xs' style='border:solid 1px rgba(153, 11, 11, 1)' >Go to Contact Info</a>
 </div>
+-->
 
 <div class="navbar navbar-default navbar-static-top" ng-controller="NavbarController">
   <div class="container">
@@ -18,6 +20,19 @@
     </div>
     <div uib-collapse="nav.isCollapsed" class="navbar-collapse collapse" id="navbar-main">
       <ul class="nav navbar-nav">
+        <li class="btn-group" uib-dropdown is-open="status.isopen">
+          <a id="single-button" type="button"  uib-dropdown-toggle ng-disabled="disabled">
+            Districts <span class="caret"></span>
+          </a>
+          <ul class="dropdown-menu" uib-dropdown-menu role="menu" aria-labelledby="single-button">
+            <li role="menuitem" ui-sref-active="active"><a ui-sref="statewide">Statewide</a></li>
+            <li role="menuitem" ui-sref-active="active"><a ui-sref='district1'>District 1</a></li>
+            <li role="menuitem" ui-sref-active="active"><a ui-sref='district2'>District 2</a></li>
+            <li role="menuitem" ui-sref-active="active"><a ui-sref='district3'>District 3</a></li>
+            <li role="menuitem" ui-sref-active="active"><a ui-sref='district4'>District 4</a></li>
+
+          </ul>
+        </li>
         <li ng-repeat='item in nav.menu' ui-sref-active="active">
           <a ui-sref='{{item.state}}'>{{item.title}}</a>
         </li>

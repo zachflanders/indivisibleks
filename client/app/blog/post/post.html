@@ -8,6 +8,10 @@
           <hr>
       <div ng-bind-html='$ctrl.post.body'></div>
       <hr>
+      <button class='btn btn-xs facebook-btn' ng-click='$ctrl.share($ctrl.post._id, $ctrl.post.title)'>
+        <i class="fa fa-facebook" aria-hidden="true"></i>
+        &nbsp;Share
+      </button>
     </div>
   </div>
 </div>

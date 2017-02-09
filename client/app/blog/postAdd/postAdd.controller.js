@@ -5,7 +5,7 @@ class PostAddComponent {
   constructor($http) {
     var vm = this;
     vm.post = {};
-    vm.post.status = 'Draft';
+    vm.post.status = '';
     vm.post.title = '';
     vm.post.publish = '';
     vm.post.body = '';

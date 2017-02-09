@@ -2,15 +2,33 @@
   <div class='col-md-8'>
     <h1>Updates</h1>
     <hr>
+    <div class='row'>
+      <div ng-show="$ctrl.hasRole('editor')">
+          <div class='col-xs-12' style='background:#e0e0e0; padding:15px; margin-bottom:15px;'>
+            <span class='text-muted'>Editor Toolbar</span> &nbsp;
+            <a href='/post/add' class='btn btn-default'>
+              <i class="fa fa-plus" aria-hidden="true"></i> Add Post
+            </a>
+          </div>
+      </div>
+    </div>
     <div dir-paginate="post in $ctrl.posts | orderBy:'-publish' | itemsPerPage:5" >
-      <h2>
-        <a ng-show="$ctrl.hasRole('editor')" href='/post/{{post._id}}/edit' class='btn btn-default pull-right'>Edit Post</a>
-        <a href='/post/{{post._id}}' style='color:#000000;'>{{post.title}}</a>
-      </h2>
-      {{post.publish | date}}<br><br>
-      <div ng-bind-html='$ctrl.trustAsHtml(post.body)'></div>
-      <hr>
-      <br>
+      <div ng-show="post.status=='Published' || $ctrl.hasRole('editor')">
+        <span class='label label-default' ng-show="post.status=='Draft'">DRAFT</span>
+        <h2>
+          <a ng-show="$ctrl.hasRole('editor')" href='/post/{{post._id}}/edit' class='btn btn-default pull-right'>Edit Post</a>
+          <a href='/post/{{post._id}}' style='color:#000000;'>{{post.title}}</a>
+        </h2>
+        {{post.publish | date}}<br><br>
+        <div ng-bind-html='$ctrl.trustAsHtml(post.body)'></div>
+        <hr>
+        <button class='btn btn-xs facebook-btn' ng-click='$ctrl.share(post._id, post.title)'>
+          <i class="fa fa-facebook" aria-hidden="true"></i>
+          &nbsp;Share
+        </button>
+        <hr>
+        <br>
+      </div>
     </div>
   </div>
 </div>
