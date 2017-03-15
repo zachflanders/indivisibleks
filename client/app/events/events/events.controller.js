@@ -2,7 +2,7 @@
 (function(){
 
 class EventsComponent {
-  constructor($http, $scope, $rootScope, Auth) {
+  constructor($http, $scope, $rootScope, Auth, $compile) {
     this.message = 'Hello';
     $http.get('/api/events').then(response => {
       $scope.events = [];
@@ -33,6 +33,16 @@ class EventsComponent {
       });
     };
     $scope.eventSources = [ $scope.eventsF];
+
+    $scope.eventPopover = function(event, element, view){
+      element.attr({'uib-popover': event.title,
+                      'popover-append-to-body': true,
+                      'popover-is-open': false,
+                     'popover-trigger':'mouseenter'});
+      $compile(element)($scope);
+
+    };
+
     $scope.uiConfig = {
       calendar:{
         height: 600,
@@ -41,9 +51,11 @@ class EventsComponent {
           left: 'month agendaWeek listMonth',
           center: 'title',
           right: 'today prev,next'
+        },
+        eventRender: $scope.eventPopover,
+
         }
-      }
-    };
+      };
     this.hasRole = Auth.hasRole;
   }
 }

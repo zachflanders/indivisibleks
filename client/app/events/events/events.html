@@ -20,6 +20,7 @@
       <hr>
       <div class='panel panel-default' dir-paginate="event in events | orderBy:'start' | itemsPerPage: 4 ">
         <div class='panel-body'>
+          <span class="label" style='background:{{event.color}};'>{{event.districtName}}</span>
           <h4><strong><a href='/event/{{event._id}}' style='color:#000;'>{{event.title}}</a></strong></h4>
           <h4>{{event.start | date: 'EEEE, MMMM d'}}</h4>
           <p>
@@ -35,6 +36,7 @@
     <div class='col-md-8'>
       <h1>Calendar</h1>
       <hr>
-      <div ui-calendar="uiConfig.calendar"  ng-model="eventSources"></div>
+
+      <div ui-calendar="uiConfig.calendar"  ng-model="eventSources" calendar='eventCalendar'></div>
     </div>
 </div>
